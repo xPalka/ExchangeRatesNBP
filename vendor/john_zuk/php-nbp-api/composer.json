@@ -1,0 +1,39 @@
+{
+  "name": "john_zuk/php-nbp-api",
+  "type": "library",
+  "description": "NBP (Narodowy Bank Polski) API client",
+  "keywords": ["nbp", "api", "currency", "money"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Janusz Żukowicz",
+      "email": "janusz.zukowicz@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1 || ^8.0",
+    "php-http/client-common": "^2.0",
+    "php-http/discovery": "^1.6",
+    "php-http/httplug": "^2.0",
+    "ext-json": "*"
+  },
+  "provide": {
+    "php-http/async-client-implementation": "1.0",
+    "php-http/client-implementation": "1.0"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^0.12.65",
+    "squizlabs/php_codesniffer": "^3.5",
+    "guzzlehttp/guzzle": "^7.2",
+    "http-interop/http-factory-guzzle": "^1.0",
+    "vimeo/psalm": "^4.4",
+    "phpunit/phpunit": "^9.5",
+    "nyholm/psr7": "^1.3"
+  },
+  "autoload": {
+    "psr-4": { "NBP\\": "src/NBP/" }
+  },
+  "autoload-dev": {
+    "psr-4": { "NBP\\Tests\\": "test/" }
+  }
+}
